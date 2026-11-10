@@ -19,7 +19,12 @@ set "HI_LAUNCHER=%~dp0open_hernandez_invoice.pyw"
 set "HI_ICON=%~dp0assets\hernandez_invoice.ico"
 rem PowerShell creates a standard Windows shortcut. Arguments are passed through
 rem environment variables so spaces and apostrophes in folder names are safe.
-powershell.exe -NoProfile -NonInteractive -Command "$ErrorActionPreference='Stop'; $shell=New-Object -ComObject WScript.Shell; $desktop=[Environment]::GetFolderPath('Desktop'); if (-not $desktop) { throw 'Desktop folder not found' }; $shortcut=$shell.CreateShortcut([IO.Path]::Combine($desktop,'Hernandez Invoice.lnk')); $shortcut.TargetPath=$env:HI_PYTHONW; $shortcut.Arguments=[char]34 + $env:HI_LAUNCHER + [char]34; $shortcut.WorkingDirectory=$env:HI_PROJECT; $shortcut.IconLocation=$env:HI_ICON + ',0'; $shortcut.Description='Open Hernandez Invoice'; $shortcut.Save()"
+powershell.exe -NoProfile -NonInteractive -Command "$ErrorActionPreference='Stop'; $shell=New-Object -ComObject WScript.Shell; 
+$desktop=[Environment]::GetFolderPath('Desktop'); if (-not $desktop) { throw 'Desktop folder not found' };
+ $shortcut=$shell.CreateShortcut([IO.Path]::Combine($desktop,'Hernandez Invoice.lnk')); 
+ $shortcut.TargetPath=$env:HI_PYTHONW; $shortcut.Arguments=[char]34 + $env:HI_LAUNCHER + 
+ [char]34; $shortcut.WorkingDirectory=$env:HI_PROJECT; $shortcut.IconLocation=$env:HI_ICON + 
+ ',0'; $shortcut.Description='Open Hernandez Invoice'; $shortcut.Save()"
 if errorlevel 1 (
   echo The shortcut could not be created. Check that you can write to your Desktop.
   pause
