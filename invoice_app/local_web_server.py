@@ -109,7 +109,7 @@ class LocalRequestHandler(BaseHTTPRequestHandler):
         export_match = re.fullmatch(r'/api/exports/(clients|products|sales|invoice-items)\.csv', path)
         if method == 'GET' and export_match:
             kind = export_match.group(1)
-            body = csv_exports.make_csv(kind, query.get('year', [None])[0], query.get('month', [None])[0])
+            body = csv_exports.make_csv(kind, query.get('year', [None])[0], query.get('month', [None])[0], query.get('lang', ['en'])[0])
             return self._send(HTTPStatus.OK, body, 'text/csv; charset=utf-8', {'Content-Disposition': f'attachment; filename="hernandez-{kind}.csv"'})
         for label, service in (('customers', customers), ('products', products), ('invoices', invoices)):
             if path == '/api/' + label and method == 'POST':
