@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Hernandez Invoice</title>
+  <link rel="stylesheet" href="/assets/css/application.css">
+  <script type="module" src="/assets/js/application.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#page-content">Skip to main content</a>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Hernandez Invoice home">
+        <span class="brand-mark">H</span><span><strong>Hernandez</strong><small>INVOICE</small></span>
+      </a>
+      <p class="nav-caption">WORKSPACE</p>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="#dashboard" data-page="dashboard"><span class="nav-symbol" aria-hidden="true">◫</span> Overview</a>
+        <a href="#invoices" data-page="invoices"><span class="nav-symbol" aria-hidden="true">▤</span> Invoices</a>
+        <a href="#clients" data-page="clients"><span class="nav-symbol" aria-hidden="true">♙</span> Clients</a>
+        <a href="#products" data-page="products"><span class="nav-symbol" aria-hidden="true">◇</span> Products</a>
+        <a href="#reports" data-page="reports"><span class="nav-symbol" aria-hidden="true">▥</span> Sales reports</a>
+        <a href="#settings" data-page="settings"><span class="nav-symbol" aria-hidden="true">⚙</span> Business settings</a>
+      </nav>
+      <div class="sidebar-footer"><span class="local-dot"></span><span>Running locally<small>Your data stays on this computer</small></span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-label">YOUR WORKSPACE <span>/</span> <strong id="breadcrumb">Overview</strong></div>
+        <div class="topbar-actions">
+          <button class="button button-secondary top-close" id="close-app" type="button">Close app</button>
+          <button class="button button-primary top-new" id="top-new-invoice" type="button"><span>+</span> New invoice</button>
+        </div>
+      </header>
+      <main id="page-content" tabindex="-1"><div class="loading">Loading Hernandez Invoice…</div></main>
+      <footer class="app-footer">Hernandez Invoice <span>•</span> Made for your business</footer>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
