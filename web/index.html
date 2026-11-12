@@ -1,51 +1,129 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
 
-  <title>Hernandez Invoice</title>
+    <title>Hernandez Invoice</title>
 
-  <link rel="stylesheet" href="/assets/css/application.css">
-  <link rel="stylesheet" href="/assets/css/interface_theme.css">
-  <script type="module" src="/assets/js/application.js"></script>
-</head>
+    <link rel="stylesheet" href="/assets/css/application.css" />
+    <link rel="stylesheet" href="/assets/css/interface_theme.css" />
+    <script type="module" src="/assets/js/application.js"></script>
+  </head>
 
+  <body>
+    <a class="skip-link" href="#page-content" data-i18n="Skip to main content"
+      >Skip to main content</a
+    >
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#dashboard" aria-label="Hernandez Invoice home">
+          <strong>Hernandez Invoice</strong>
+        </a>
+        <p class="nav-caption" data-i18n="WORKSPACE">WORKSPACE</p>
 
-<body>
-  <a class="skip-link" href="#page-content" data-i18n="Skip to main content">Skip to main content</a>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <a class="brand" href="#dashboard" aria-label="Hernandez Invoice home">
-        <strong>Hernandez Invoice</strong>
-      </a>
-      <p class="nav-caption" data-i18n="WORKSPACE">WORKSPACE</p>
+        <nav class="navigation" aria-label="Main navigation">
+          <a href="#dashboard" data-page="dashboard"
+            ><span class="nav-symbol" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <path
+                  d="M3 10.5 12 3l9 7.5M5.5 9.5V21h13V9.5M9.5 21v-7h5v7"
+                /></svg></span
+            ><span data-i18n="Overview">Overview</span></a
+          >
+          <a href="#invoices" data-page="invoices"
+            ><span class="nav-symbol" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6" /></svg></span
+            ><span data-i18n="Invoices">Invoices</span></a
+          >
+          <a href="#clients" data-page="clients"
+            ><span class="nav-symbol" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <circle cx="9" cy="8" r="3" />
+                <path
+                  d="M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20zM16 5.5a3 3 0 0 1 0 5.8M16 14a4.5 4.5 0 0 1 4.5 4.5V20H17"
+                /></svg></span
+            ><span data-i18n="Clients">Clients</span></a
+          >
+          <a href="#products" data-page="products"
+            ><span class="nav-symbol" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <path
+                  d="m12 3 8 4.5v9L12 21l-8-4.5v-9zM4.5 7.8 12 12l7.5-4.2M12 12v9"
+                /></svg></span
+            ><span data-i18n="Products">Products</span></a
+          >
+          <a href="#reports" data-page="reports"
+            ><span class="nav-symbol" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <path
+                  d="M4 20V12h3v8zM10.5 20V4h3v16zM17 20v-6h3v6z"
+                /></svg></span
+            ><span data-i18n="Sales reports">Sales reports</span></a
+          >
+          <a href="#settings" data-page="settings"
+            ><span class="nav-symbol" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M10.9 2.5h2.2l.5 2 1.6.8 1.9-.6 1.5 1.5-.6 1.9.8 1.6 2 .5v2.2l-2 .5-.8 1.6.6 1.9-1.5 1.5-1.9-.6-1.6.8-.5 2h-2.2l-.5-2-1.6-.8-1.9.6-1.5-1.5.6-1.9-.8-1.6-2-.5v-2.2l2-.5.8-1.6-.6-1.9 1.5-1.5 1.9.6 1.6-.8z"
+                /></svg></span
+            ><span data-i18n="Business settings">Business settings</span></a
+          >
+        </nav>
 
-      <nav class="navigation" aria-label="Main navigation">
-        <a href="#dashboard" data-page="dashboard"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5M5.5 9.5V21h13V9.5M9.5 21v-7h5v7"/></svg></span><span data-i18n="Overview">Overview</span></a>
-        <a href="#invoices" data-page="invoices"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg></span><span data-i18n="Invoices">Invoices</span></a>
-        <a href="#clients" data-page="clients"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20zM16 5.5a3 3 0 0 1 0 5.8M16 14a4.5 4.5 0 0 1 4.5 4.5V20H17"/></svg></span><span data-i18n="Clients">Clients</span></a>
-        <a href="#products" data-page="products"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9zM4.5 7.8 12 12l7.5-4.2M12 12v9"/></svg></span><span data-i18n="Products">Products</span></a>
-        <a href="#reports" data-page="reports"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V12h3v8zM10.5 20V4h3v16zM17 20v-6h3v6z"/></svg></span><span data-i18n="Sales reports">Sales reports</span></a>
-        <a href="#settings" data-page="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M10.9 2.5h2.2l.5 2 1.6.8 1.9-.6 1.5 1.5-.6 1.9.8 1.6 2 .5v2.2l-2 .5-.8 1.6.6 1.9-1.5 1.5-1.9-.6-1.6.8-.5 2h-2.2l-.5-2-1.6-.8-1.9.6-1.5-1.5.6-1.9-.8-1.6-2-.5v-2.2l2-.5.8-1.6-.6-1.9 1.5-1.5 1.9.6 1.6-.8z"/></svg></span><span data-i18n="Business settings">Business settings</span></a>
-      </nav>
-
-      <div class="sidebar-footer"><span class="local-dot"></span><span><span data-i18n="Running locally">Running locally</span><small data-i18n="Your data stays on this computer">Your data stays on this computer</small></span></div>
-    </aside>
-    <div class="workspace">
-      <header class="topbar">
-        <div class="topbar-label"><span data-i18n="YOUR WORKSPACE">YOUR WORKSPACE</span> <span>/</span> <strong id="breadcrumb">Overview</strong></div>
-        <div class="topbar-actions">
-          <label class="language-picker"><span class="sr-only" data-i18n="Language">Language</span><select id="language-select" aria-label="Language"><option value="en">English</option><option value="es">Español</option></select></label>
-          <button class="button button-secondary top-close" id="close-app" type="button" data-i18n="Close app">Close app</button>
-          <button class="button button-primary top-new" id="top-new-invoice" type="button"><span>+</span><span data-i18n="New invoice">New invoice</span></button>
+        <div class="sidebar-footer">
+          <span class="local-dot"></span
+          ><span
+            ><span data-i18n="Running locally">Running locally</span
+            ><small data-i18n="Your data stays on this computer"
+              >Your data stays on this computer</small
+            ></span
+          >
         </div>
-      </header>
-      <main id="page-content" tabindex="-1"><div class="loading">Loading Hernandez Invoice…</div></main>
-      <footer class="app-footer">Hernandez Invoice <span>•</span> <span data-i18n="Made for your business">Made for your business</span></footer>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <div class="topbar-label">
+            <span data-i18n="YOUR WORKSPACE">YOUR WORKSPACE</span>
+            <span>/</span> <strong id="breadcrumb">Overview</strong>
+          </div>
+          <div class="topbar-actions">
+            <label class="language-picker"
+              ><span class="sr-only" data-i18n="Language">Language</span
+              ><select id="language-select" aria-label="Language">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+              </select></label
+            >
+            <button
+              class="button button-secondary top-close"
+              id="close-app"
+              type="button"
+              data-i18n="Close app"
+            >
+              Close app
+            </button>
+            <button
+              class="button button-primary top-new"
+              id="top-new-invoice"
+              type="button"
+            >
+              <span>+</span><span data-i18n="New invoice">New invoice</span>
+            </button>
+          </div>
+        </header>
+        <main id="page-content" tabindex="-1">
+          <div class="loading">Loading Hernandez Invoice…</div>
+        </main>
+        <footer class="app-footer">
+          Hernandez Invoice <span>•</span>
+          <span data-i18n="Made for your business">Made for your business</span>
+        </footer>
+      </div>
     </div>
-  </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-</body>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
